@@ -11,6 +11,20 @@
     425.555.0100
 </address>
 
+@using (Html.BeginForm("SendEmail", "Home"))
+{
+    @*<div class="form-row">
+        <div class="form-group col-md-4">
+            @Html.LabelFor(x => x.Name)
+            @Html.TextBoxFor(x => x.Name, new { @class = "form-control" })
+            @Html.ValidationMessageFor(x => x.Name)
+        </div>
+    </div>*@
+
+    <br />
+    <button>Send Email</button>
+}
+
 <address>
     <strong>Support:</strong>   <a href="mailto:Support@example.com">Support@example.com</a><br />
     <strong>Marketing:</strong> <a href="mailto:Marketing@example.com">Marketing@example.com</a>

@@ -1,8 +1,5 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Web;
-using System.Web.Mvc;
+﻿using System.Web.Mvc;
+
 
 namespace EmailSender.Controllers
 {
@@ -22,7 +19,14 @@ namespace EmailSender.Controllers
 
         public ActionResult Contact()
         {
+            return View();
+        }
+
+        public ActionResult SendEmail()
+        {
             ViewBag.Message = "Your contact page.";
+
+            EmailSenderNetMail.SendCalendarEvent(EmailSenderNetMail.CreateCalendar());
 
             return View();
         }
